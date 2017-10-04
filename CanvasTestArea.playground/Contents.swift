@@ -21,18 +21,44 @@ import Cocoa
 import PlaygroundSupport
 
 // Create a new canvas
-let canvas = Canvas(width: 300, height: 500)
-
-// Draw a circle at the origin with radius of 50 pixels
-canvas.drawEllipse(centreX: 0, centreY: 0, width: 50, height: 50)
+let pic = Canvas(width: 500, height: 500)
 
 // Show where the origin is
-canvas.drawAxes()
+pic.drawAxes()
 
-// Draw an ellipse in a different color at the centre of the canvas
-canvas.fillColor = Color.green
-canvas.drawEllipse(centreX: 150, centreY: 250, width: 50, height: 100)
 
+// Ears
+//right
+pic.translate(byX: 375, byY: 380)
+pic.rotate(by: 55)
+pic.drawEllipse(centreX: 0, centreY: 0, width: 80, height: 110)
+pic.rotate(by: -55)
+pic.translate(byX: -375, byY: -380)
+//left
+pic.translate(byX: 125, byY: 380)
+pic.rotate(by: 305)
+pic.drawEllipse(centreX: 0, centreY: 0, width: 80, height: 110)
+pic.rotate(by: -305)
+pic.translate(byX: -125, byY: -380)
+
+// Main part of head
+pic.fillColor = Color.white
+pic.drawEllipse(centreX: 250, centreY: 250, width: 400, height: 350)
+
+//Eyes
+//right
+pic.fillColor = Color.black
+pic.translate(byX: 345, byY: 250)
+pic.rotate(by: 45)
+pic.drawEllipse(centreX: 0, centreY: 0, width: 80, height: 100)
+pic.rotate(by: -45)
+pic.translate(byX: -345, byY: -250)
+//left
+pic.translate(byX: 150, byY: 250)
+pic.rotate(by: 305)
+pic.drawEllipse(centreX: 0, centreY: 0, width: 80, height: 100)
+pic.rotate(by: -305)
+pic.translate(byX: -150, byY: -250)
 
 // This code is necessary to see the result in the Assistant Editor at right
-PlaygroundPage.current.liveView = canvas.imageView
+PlaygroundPage.current.liveView = pic.imageView
