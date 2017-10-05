@@ -48,17 +48,75 @@ pic.drawEllipse(centreX: 250, centreY: 250, width: 400, height: 350)
 //Eyes
 //right
 pic.fillColor = Color.black
-pic.translate(byX: 345, byY: 250)
+pic.translate(byX: 330, byY: 250)
 pic.rotate(by: 45)
 pic.drawEllipse(centreX: 0, centreY: 0, width: 80, height: 100)
 pic.rotate(by: -45)
-pic.translate(byX: -345, byY: -250)
+pic.translate(byX: -330, byY: -250)
 //left
-pic.translate(byX: 150, byY: 250)
-pic.rotate(by: 305)
+pic.translate(byX: 170, byY: 250)
+pic.rotate(by: 315)
 pic.drawEllipse(centreX: 0, centreY: 0, width: 80, height: 100)
-pic.rotate(by: -305)
-pic.translate(byX: -150, byY: -250)
+pic.rotate(by: -315)
+pic.translate(byX: -170, byY: -250)
 
+//lips
+pic.translate(byX: 260, byY: 150)
+pic.rotate(by: 355)
+pic.drawEllipse(centreX: 0, centreY: 0, width: 50, height: 60)
+pic.rotate(by: -355)
+pic.translate(byX: -260, byY: -150)
+
+pic.translate(byX: 240, byY: 150)
+pic.rotate(by: 5)
+pic.drawEllipse(centreX: 0, centreY: 0, width: 50, height: 60)
+pic.rotate(by: -5)
+pic.translate(byX: -240, byY: -150)
+
+pic.fillColor = Color.white
+pic.translate(byX: 265, byY: 150)
+pic.rotate(by: 355)
+pic.drawEllipse(centreX: 0, centreY: 0, width: 30, height: 60)
+pic.rotate(by: -355)
+pic.translate(byX: -265, byY: -150)
+
+pic.translate(byX: 235, byY: 150)
+pic.rotate(by: 5)
+pic.drawEllipse(centreX: 0, centreY: 0, width: 30, height: 60)
+pic.rotate(by: -5)
+pic.translate(byX: -235, byY: -150)
+
+//pupils
+//right
+pic.fillColor = Color.white
+pic.translate(byX: 315, byY: 260)
+pic.drawEllipse(centreX: 0, centreY: 0, width: 20, height: 20)
+pic.translate(byX: -315, byY: -260)
+//left
+pic.translate(byX: 185, byY: 260)
+pic.drawEllipse(centreX: 0, centreY: 0, width: 20, height: 20)
+pic.translate(byX: -185, byY: -260)
+
+//nose
+pic.fillColor = Color.black
+pic.translate(byX: 250, byY: 170)
+pic.rotate(by: 90)
+pic.drawEllipse(centreX: 0, centreY: 0, width: 30, height: 50)
+pic.rotate(by: -90)
+pic.translate(byX: -250, byY: -170)
+
+//cheeks
+pic.fillColor = Color(hue: 0, saturation: 50, brightness: 100, alpha: 100)
+pic.translate(byX: 50, byY: 200)
+pic.rotate(by: 90)
+pic.drawEllipse(centreX: 0, centreY: 0, width: 30, height: 50)
+pic.rotate(by: -90)
+pic.translate(byX: -150, byY: -200)
+
+pic.translate(byX: 350, byY: 200)
+pic.rotate(by: 90)
+pic.drawEllipse(centreX: 0, centreY: 0, width: 30, height: 50)
+pic.rotate(by: -90)
+pic.translate(byX: -350, byY: -200)
 // This code is necessary to see the result in the Assistant Editor at right
 PlaygroundPage.current.liveView = pic.imageView
